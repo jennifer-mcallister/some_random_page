@@ -1,0 +1,21 @@
+@use "varibles" as var;
+
+// breakpoints 
+@mixin for-size($screensize) {
+    @if $screensize == tablet {
+        @media screen and (min-width: var.$tablet) {
+            @content;
+        }
+    }@else if $screensize == desktop {
+        @media screen and (min-width: var.$desktop) {
+            @content;
+        }
+    }
+}
+
+@mixin box($color, $height: 100vh) {
+    height: $height;
+    background-color: $color;
+    display: flex;
+    flex-direction: column;
+}

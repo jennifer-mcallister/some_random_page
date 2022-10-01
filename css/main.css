@@ -1,0 +1,86 @@
+header {
+  height: 100vh;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  header {
+    background-color: palevioletred;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    background-color: yellowgreen;
+  }
+}
+header nav {
+  height: 20%;
+  background-color: rgb(255, 192, 192);
+  display: flex;
+  flex-direction: column;
+}
+header .title-container {
+  height: 70%;
+  background-color: rgb(220, 151, 245);
+  display: flex;
+  flex-direction: column;
+}
+header .button-container {
+  height: 10%;
+  background-color: rgb(146, 231, 255);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  height: 100%;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+}
+main .title-main-container {
+  height: 20%;
+  background-color: rgb(255, 129, 106);
+  display: flex;
+  flex-direction: column;
+}
+main .profil-container {
+  height: 75vh;
+  background-color: rgb(255, 116, 248);
+  display: flex;
+  flex-direction: column;
+}
+main .title-container {
+  height: 10%;
+  background-color: rgb(133, 220, 133);
+  display: flex;
+  flex-direction: column;
+}
+main .img-container {
+  height: 50%;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+}
+main .description-container {
+  height: 20%;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  height: 25vh;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=main.css.map */
