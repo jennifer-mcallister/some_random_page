@@ -13,9 +13,68 @@
     }
 }
 
+
 @mixin box($color, $height: 100vh) {
     height: $height;
     background-color: $color;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin footer-box{
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    gap: 10px;
+}
+
+@mixin header{
+    background-image: url(./../assets/assets/negative-space-black-forest-dawn.jpg);
+    background-size: cover;
+    background-position: center;
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin profil-box {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+@mixin text-box {
+    height: auto;
+    width: 80%;
+    border-radius: 5px;
+    background-color: rgb(220, 220, 220);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin text {
+    margin: 40px;
+}
+
+@mixin image-box {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.274);
 }

@@ -1,2 +1,79 @@
 @use "mixins";
-@use "layout";
+@use "varibles";
+
+header {
+    @include mixins.header;
+
+    @include mixins.for-size(tablet) {
+        background-color: palevioletred;
+    }
+
+    @include mixins.for-size(desktop) {
+        background-color: yellowgreen;
+    }
+}
+
+nav {
+    width: 100%;
+    @include mixins.box(rgb(255, 192, 192), 20%);
+
+    & ul {
+        list-style: none;
+        background-color: aqua;
+    }
+   
+}
+
+header .title-container {
+    @include mixins.box(rgb(220, 151, 245,), 70%)
+}
+
+.button-container {
+    @include mixins.box(rgb(146, 231, 255), 10%)
+}
+
+h5 {
+    margin: 0;
+}
+
+
+main {
+    gap: 30px;
+    @include mixins.box(white, 100%);
+}
+
+
+.profil-container {
+    @include mixins.profil-box
+}
+
+
+.description-container {
+    @include mixins.text-box
+}
+
+main span {
+    @include mixins.text 
+}
+
+.img-container {
+    @include mixins.image-box 
+}
+
+img {
+    border-radius: 50%;
+}
+
+footer {
+    @include mixins.box(black, 25vh) 
+}
+
+footer {
+    @include mixins.footer-box;
+
+    & .text-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
