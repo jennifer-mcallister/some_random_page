@@ -15,22 +15,30 @@ header {
 
 nav {
     width: 100%;
-    @include mixins.box(rgb(255, 192, 192), 20%);
+    @include mixins.box(rgba(255, 255, 255, 0.100), 13%);
 
     & ul {
         list-style: none;
-        background-color: aqua;
+        padding: 0;
+    }
+
+    & a {
+        text-decoration: none;
+        color: white;
     }
    
 }
 
 header .title-container {
-    @include mixins.box(rgb(220, 151, 245,), 70%)
+    color: white;
+    @include mixins.firstpage-box;
+
 }
 
 .button-container {
     @include mixins.box(rgb(146, 231, 255), 10%)
 }
+
 
 h5 {
     margin: 0;
@@ -52,8 +60,13 @@ main {
     @include mixins.text-box
 }
 
-main span {
-    @include mixins.text 
+main blockquote {
+    quotes: "“" "”";
+    @include mixins.text;
+    &::before {
+        content: open-quote;
+        font-size: 4rem; 
+    }
 }
 
 .img-container {
@@ -64,9 +77,6 @@ img {
     border-radius: 50%;
 }
 
-footer {
-    @include mixins.box(black, 25vh) 
-}
 
 footer {
     @include mixins.footer-box;
@@ -74,6 +84,7 @@ footer {
     & .text-container {
         display: flex;
         flex-direction: column;
+        color: white;
     }
 
 }
