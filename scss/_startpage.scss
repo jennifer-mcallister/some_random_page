@@ -15,11 +15,13 @@ header {
 
 nav {
     width: 100%;
-    @include mixins.box(rgba(255, 255, 255, 0.100), 13%);
+    @include mixins.box(rgba(220, 220, 220, 0.103), 16%);
+    justify-content: end;
 
     & ul {
         list-style: none;
         padding: 0;
+        margin-bottom: 5px;
     }
 
     & a {
@@ -30,18 +32,28 @@ nav {
 }
 
 header .title-container {
-    color: white;
+    
     @include mixins.firstpage-box;
+    align-items: center;
+    color: white;
 
 }
 
 .button-container {
-    @include mixins.box(rgb(146, 231, 255), 10%)
+    height: auto;
 }
 
+.ham-container {
+    width: auto;
+}
 
 h5 {
     margin: 0;
+}
+
+header p {
+    font-size: 1.4rem;
+    text-align: center;
 }
 
 
@@ -60,13 +72,8 @@ main {
     @include mixins.text-box
 }
 
-main blockquote {
-    quotes: "“" "”";
-    @include mixins.text;
-    &::before {
-        content: open-quote;
-        font-size: 4rem; 
-    }
+.quotationmark {
+    font-size: 2rem;
 }
 
 .img-container {
@@ -85,6 +92,18 @@ footer {
         display: flex;
         flex-direction: column;
         color: white;
+        gap: 10px;
+        width: 80%;
     }
 
+}
+
+.socialmedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.socialmedia-icon {
+    width: 30px;
 }
