@@ -92,3 +92,20 @@ footer {
 .socialmedia-icon {
     width: 30px;
 }
+
+.button-container {
+    width: 30px;
+    padding: 30px;
+    font-size: 30px;
+    display: flex;
+}
+
+.button-container__clickable {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+header .button-container {
+    color: white;
+}
