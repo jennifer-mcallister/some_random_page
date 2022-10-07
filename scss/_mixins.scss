@@ -13,25 +13,6 @@
     }
 }
 
-
-
-
-
-@mixin text-box {
-    height: auto;
-    width: 80%;
-    border-radius: 5px;
-    background-color: rgb(220, 220, 220);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@mixin text {
-    margin: 40px;
-}
-
 @mixin image-box {
     width: 200px;
     display: flex;

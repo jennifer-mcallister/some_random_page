@@ -73,7 +73,8 @@ header p {
 
 
 .description-container {
-    @include mixins.text-box
+    background-color: rgb(220, 220, 220);
+    border-radius: 3px;
 }
 
 .quotationmark {
