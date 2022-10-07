@@ -2,20 +2,27 @@
 @use "varibles";
 @use "hamburger-menu";
 @use "layout";
+@use "button-arrow";
 
 header {
     background-image: url(./../assets/assets/negative-space-black-forest-dawn.jpg);
     background-size: cover;
     background-position: center;
-
-    @include mixins.for-size(tablet) {
-        background-color: palevioletred;
+    
+    & .title-container {
+        color: white;
     }
 
-    @include mixins.for-size(desktop) {
-        background-color: yellowgreen;
+    & p {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    & .button-container {
+        color: white;
     }
 }
+
 
 nav {
     background-color: rgba(220, 220, 220, 0.203);
@@ -26,13 +33,23 @@ nav {
         margin-bottom: 5px;
         font-size: 1.2rem;
         
-
         @include mixins.for-size(tablet) {
             display: flex;
             flex-direction: row;
             gap: 30px;
-            padding: 30px;
-            
+            padding: 30px;  
+        }
+    }
+
+    & li:active {
+        text-decoration: underline;
+        text-decoration-color: white;
+    }
+    
+    & li:hover {
+        @include mixins.for-size(tablet) {
+        text-decoration: underline;
+        text-decoration-color: white;
         }
     }
 
@@ -40,53 +57,30 @@ nav {
         text-decoration: none;
         color: white;
     }
-   
 }
 
-li:active {
-    text-decoration: underline;
-    text-decoration-color: white;
-}
 
-li:hover {
-    @include mixins.for-size(tablet) {
-    text-decoration: underline;
-    text-decoration-color: white;
+main {
+    & h5 {
+        margin: 0;
     }
-    
-}
 
-header .title-container {
-    color: white;
-}
+    & .description-container {
+        background-color: rgb(220, 220, 220);
+        border-radius: 3px;
+    }
 
+    & .quotationmark {
+        font-size: 2rem;
+    }
 
-h5 {
-    margin: 0;
-}
+    & .img-container {
+        @include mixins.image-box 
+    }
 
-header p {
-    font-size: 1.4rem;
-    text-align: center;
-}
-
-
-
-.description-container {
-    background-color: rgb(220, 220, 220);
-    border-radius: 3px;
-}
-
-.quotationmark {
-    font-size: 2rem;
-}
-
-.img-container {
-    @include mixins.image-box 
-}
-
-img {
-    border-radius: 50%;
+    & img {
+        border-radius: 50%;
+    }
 }
 
 
@@ -98,31 +92,19 @@ footer {
 
     @include mixins.for-size(tablet) {
     }
+
+    & .socialmedia {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    & .socialmedia-icon {
+        width: 30px;
+    }
 }
 
-.socialmedia {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
 
-.socialmedia-icon {
-    width: 30px;
-}
 
-.button-container {
-    width: 30px;
-    padding: 30px;
-    font-size: 30px;
-    display: flex;
-}
 
-.button-container__clickable {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-}
 
-header .button-container {
-    color: white;
-}
