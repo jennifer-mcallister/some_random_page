@@ -18,18 +18,21 @@ header {
 }
 
 nav {
-    background-color: rgba(220, 220, 220, 0.103);
+    background-color: rgba(220, 220, 220, 0.203);
 
     & ul {
         list-style: none;
         padding: 0;
         margin-bottom: 5px;
+        font-size: 1.2rem;
+        
 
         @include mixins.for-size(tablet) {
             display: flex;
             flex-direction: row;
             gap: 30px;
             padding: 30px;
+            
         }
     }
 
@@ -38,6 +41,19 @@ nav {
         color: white;
     }
    
+}
+
+li:active {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+li:hover {
+    @include mixins.for-size(tablet) {
+    text-decoration: underline;
+    text-decoration-color: white;
+    }
+    
 }
 
 header .title-container {

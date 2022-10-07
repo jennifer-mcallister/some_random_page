@@ -1,7 +1,6 @@
 @use "mixins";
 @use "varibles";
 
-// hamburgermenu test
 
 .checkbox {
     display: none;
@@ -10,8 +9,8 @@
 .button {
     width: 1rem;
     position: absolute;
-    top: 3vh; 
-    right: 5vw; 
+    top: 30px; 
+    right: 30px; 
     z-index: 2000;
     text-align: center; 
     cursor: pointer;
@@ -22,7 +21,7 @@
 }
 
 nav {
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
     opacity: 0;
@@ -34,10 +33,6 @@ nav {
     }
 }
 
-
-
-
-/* functionality */
 .checkbox:checked ~ .background {
     transform: scale(80);
 }
@@ -45,8 +40,6 @@ nav {
     opacity: 1;
 }
 
-/*  */
-/* styling hamb ICON */
 .icon {
     position: absolute;
     top: 50%;
